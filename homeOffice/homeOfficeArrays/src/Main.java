@@ -131,6 +131,15 @@ public class Main {
                 System.out.println("Travels with duration greater than 7 days: " + travel);
             }
         }
+
+
+        //----------------------------------
+            //Recipes
+    
+        Recipe recipe01 = new Recipe("Tiramisu", 40);
+        Recipe recipe02 = new Recipe("Baked chicken with potatoes and carrots", 120);
+        Recipe recipe03 = new Recipe("Carbona", 30);
+        Recipe recipe04 = new Recipe("Steak with french fries", 20);
         }
 
         //----------------------------------
