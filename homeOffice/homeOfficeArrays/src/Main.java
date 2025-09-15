@@ -26,6 +26,7 @@ public class Main {
 
         classes.utilizadas.Product expensiveProduct = listOfProducts.get(0);
 
+        //Most expensive product 
         for (classes.utilizadas.Product actualProduct : listOfProducts) {
             if (actualProduct.getPrice() > expensiveProduct.getPrice()) {
                 expensiveProduct = actualProduct;
@@ -51,6 +52,7 @@ public class Main {
 
         System.out.println("All books: " + listOfBooks);
 
+        //Books released after 2010
         for (Book book : listOfBooks) {
             if (book.getYearOfPublication() > 2010) {
                 System.out.println(book);
@@ -87,6 +89,25 @@ public class Main {
             if (student.getGrades() >= 7.0) {
                 System.out.println("Aprovado(a): " + student);
             }
+
+        //----------------------------------
+        //CARS
+        Car car01 = new Car("Onix", 2024, "White");
+        Car car02 = new Car("Uno", 2016, "Black");
+        Car car03 = new Car("Sedan", 2021, "Red");
+
+        ArrayList<Car> listOfCars = new ArrayList<>();
+
+        listOfCars.add(0, car01);
+        listOfCars.add(1, car02);
+        listOfCars.add(2, car03);
+
+        //Only red cars
+        for (Car car : listOfCars) {
+            if (Car.getColor() == "Red") {
+                System.out.println(car);
+            }
+        }
         }
 
         //----------------------------------
