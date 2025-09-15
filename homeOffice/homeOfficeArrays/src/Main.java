@@ -140,10 +140,25 @@ public class Main {
         Recipe recipe02 = new Recipe("Baked chicken with potatoes and carrots", 120);
         Recipe recipe03 = new Recipe("Carbona", 30);
         Recipe recipe04 = new Recipe("Steak with french fries", 20);
+
+        ArrayList<Recipe> listOfRecipes = new ArrayList<>();
+
+        listOfRecipes.add(0, recipe01);
+        listOfRecipes.add(1, recipe02);
+        listOfRecipes.add(2, recipe03);
+        listOfRecipes.add(3, recipe04);
+
+            //Faster preparation recipes
+        for (Recipe recipe : listOfRecipes) {
+            if (recipe.getPreparationTime() <= 29) {
+                System.out.println("Recipes that take less time to prepare: " + recipe);
+            }
         }
 
         //----------------------------------
-
+            
+            
+        }
 
 
     }
