@@ -1,3 +1,5 @@
+import classes.utilizadas.Animal;
+import classes.utilizadas.Athletes;
 import classes.utilizadas.Book;
 
 import java.util.ArrayList;
@@ -5,7 +7,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         //PRODUCT
-
+        /*
         classes.utilizadas.Product product01 = new classes.utilizadas.Product("Charger", 19.99);
         classes.utilizadas.Product product02 = new classes.utilizadas.Product("Phone", 960.50);
         classes.utilizadas.Product product03 = new classes.utilizadas.Product("Computer", 1200.90);
@@ -38,10 +40,9 @@ public class Main {
         //----------------------------------
 
         //BOOKS
-
-        Book book01 = new Book("1984", "George Orwell" ,1949);
-        Book book02 = new Book("Pride and prejudice", "Jane Austen" ,1813);
-        Book book03 = new Book("Harry Potter and the Sorcerer's Stone", "J.K. Rowling" ,1997);
+        Book book01 = new Book("1984", "George Orwell", 1949);
+        Book book02 = new Book("Pride and prejudice", "Jane Austen", 1813);
+        Book book03 = new Book("Harry Potter and the Sorcerer's Stone", "J.K. Rowling", 1997);
 
         //ArrayList
         ArrayList<Book> listOfBooks = new ArrayList<>();
@@ -90,90 +91,144 @@ public class Main {
                 System.out.println("Aprovado(a): " + student);
             }
 
-        //----------------------------------
+            //----------------------------------
         //CARS
-        Car car01 = new Car("Onix", 2024, "White");
-        Car car02 = new Car("Uno", 2016, "Black");
-        Car car03 = new Car("Sedan", 2021, "Red");
+        classes.utilizadas.Car car01 = new classes.utilizadas.Car("Onix", 2024, "White");
+        classes.utilizadas.Car car02 = new classes.utilizadas.Car("Uno", 2016, "Black");
+        classes.utilizadas.Car car03 = new classes.utilizadas.Car("Sedan", 2021, "Red");
 
-        ArrayList<Car> listOfCars = new ArrayList<>();
+        ArrayList<classes.utilizadas.Car> listOfCars = new ArrayList<>();
 
         listOfCars.add(0, car01);
         listOfCars.add(1, car02);
         listOfCars.add(2, car03);
 
-        //Only red cars
-        for (Car car : listOfCars) {
-            if (car.getColor() == "Red") {
-                System.out.println(car);
+            //Only red cars
+        for (classes.utilizadas.Car car : listOfCars) {
+            if (car.getColor().equals("Red")) {
+                 System.out.println(car);
+                }
+            }
+        */
+        //----------------------------------
+    //ANIMAL
+
+        Animal animal01 = new Animal("Buddy", "dog");
+        Animal animal02 = new Animal("Daisy", "cat");
+        Animal animal03 = new Animal("Charlie", "cat");
+
+        ArrayList<Animal> listOfAnimals = new ArrayList<>();
+
+        listOfAnimals.add(0, animal01);
+        listOfAnimals.add(1, animal02);
+        listOfAnimals.add(2, animal03);
+
+        System.out.println("Full list: " + listOfAnimals);
+
+        for (Animal animal : listOfAnimals) {
+            if (animal.getSpecie().equals("Cat")) {
+                System.out.println("Only one specie: " + animal);
             }
         }
 
         //----------------------------------
-            // Traveling 
-        Travel travel01 = new Travel("South Korea", 18);
-        Travel travel02 = new Travel("Santa Maria City", 12);
-        Travel travel03 = new Travel("Tramandai Beach", 5);
-        Travel travel04 = new Travel("Cridreira Beach", 7);
 
-        ArrayList<Travel> listOfTravels = new ArrayList<>();
+    //TRAVELING
+/*
+        classes.utilizadas.Travel travel01 = new classes.utilizadas.Travel("South Korea", 18);
+        classes.utilizadas.Travel travel02 = new classes.utilizadas.Travel("Santa Maria City", 12);
+        classes.utilizadas.Travel travel03 = new classes.utilizadas.Travel("Tramandai Beach", 5);
+        classes.utilizadas.Travel travel04 = new classes.utilizadas.Travel("Cridreira Beach", 7);
+
+        ArrayList<classes.utilizadas.Travel> listOfTravels = new ArrayList<>();
 
         listOfTravels.add(0, travel01);
         listOfTravels.add(1, travel02);
         listOfTravels.add(2, travel03);
         listOfTravels.add(3, travel04);
 
-        System.out.println("Full list: " + listOfTravels);
+       System.out.println("Full list: " + listOfTravels);
 
-        //Longer than 7 days
-        for (Travel travel : listOfTravels) {
+      //Longer than 7 days
+       for (classes.utilizadas.Travel travel : listOfTravels) {
             if (travel.getDurationDays() >= 7) {
                 System.out.println("Travels with duration greater than 7 days: " + travel);
+                }
             }
-        }
 
 
-        //----------------------------------
-            //Recipes
-    
-        Recipe recipe01 = new Recipe("Tiramisu", 40);
-        Recipe recipe02 = new Recipe("Baked chicken with potatoes and carrots", 120);
-        Recipe recipe03 = new Recipe("Carbona", 30);
-        Recipe recipe04 = new Recipe("Steak with french fries", 20);
+            //----------------------------------
 
-        ArrayList<Recipe> listOfRecipes = new ArrayList<>();
+       //RECIPES
 
-        listOfRecipes.add(0, recipe01);
-        listOfRecipes.add(1, recipe02);
-        listOfRecipes.add(2, recipe03);
-        listOfRecipes.add(3, recipe04);
+       classes.utilizadas.Recipe recipe01 = new classes.utilizadas.Recipe("Tiramisu", 40);
+       classes.utilizadas.Recipe recipe02 = new classes.utilizadas.Recipe("Baked chicken with potatoes and carrots", 120);
+       classes.utilizadas.Recipe recipe03 = new classes.utilizadas.Recipe("Carbona", 30);
+       classes.utilizadas.Recipe recipe04 = new classes.utilizadas.Recipe("Steak with french fries", 20);
+
+       ArrayList<classes.utilizadas.Recipe> listOfRecipes = new ArrayList<>();
+
+       listOfRecipes.add(0, recipe01);
+       listOfRecipes.add(1, recipe02);
+       listOfRecipes.add(2, recipe03);
+       listOfRecipes.add(3, recipe04);
 
             //Faster preparation recipes
-        for (Recipe recipe : listOfRecipes) {
+       for (classes.utilizadas.Recipe recipe : listOfRecipes) {
             if (recipe.getPreparationTime() <= 29) {
-                System.out.println("Recipes that take less time to prepare: " + recipe);
+                 System.out.println("Recipes that take less time to prepare: " + recipe);
+                }
             }
-        }
 
-        //----------------------------------
-            //Movies
-        Movie movie01 = new Movie("Harry Potter and the half-blood prince", "Fantasy", 9.9);
-        Movie movie02 = new Movie("K-pop Demon Hunters", "Animation", 8.5);
-        Movie movie03 = new Movie("Ratatouille", "Drama", 10.0);
-        Movie movie04 = new Movie("Pride and prejudice", "Romance", 7.6);
+            //----------------------------------
 
-        ArrayList<Movie> listOfMovies = new ArrayList<>();
+        //MOVIES
+       classes.utilizadas.Movie movie01 = new classes.utilizadas.Movie("Harry Potter and the half-blood prince", "Fantasy", 9.9);
+       classes.utilizadas.Movie movie02 = new classes.utilizadas.Movie("K-pop Demon Hunters", "Animation", 8.5);
+       classes.utilizadas.Movie movie03 = new classes.utilizadas.Movie("Ratatouille", "Drama", 10.0);
+       classes.utilizadas.Movie movie04 = new classes.utilizadas.Movie("Pride and prejudice", "Romance", 7.6);
 
-        listOfMovies.add(0, movie01);
-        listOfMovies.add(1, movie02);
-        listOfMovies.add(2, movie03);
-        listOfMovies.add(3, movie04);
+       ArrayList<classes.utilizadas.Movie> listOfMovies = new ArrayList<>();
 
-        System.out.println("Full list: " + listOfMovies);
+       listOfMovies.add(0, movie01);
+       listOfMovies.add(1, movie02);
+       listOfMovies.add(2, movie03);
+       listOfMovies.add(3, movie04);
 
-        for (Movie movie : listOfMovies)
-        }
+       System.out.println("Full list: " + listOfMovies);
+
+            //Greater than 8 ratings
+       for (classes.utilizadas.Movie movie : listOfMovies) {
+            if (movie.getRating() > 8) {
+                 System.out.println("Greater than 8 ratings: " + movie);
+                }
+            }
 
 
+            //----------------------------------
+       //ATHLETES
+       Athletes athlete01 = new Athletes("Rebecca Andrade", "Artistic gymnastics", 9.9);
+       Athletes athlete02 = new Athletes("Rayssa Leal", "Street skating", 7.8);
+       Athletes athlete03 = new Athletes("Jaqueline Silva", "Beach volley", 8.9);
+       Athletes athlete04 = new Athletes("Beatriz Souza", "Judo", 10.0);
+
+       ArrayList<Athletes> listOfAthletes = new ArrayList<>();
+
+       listOfAthletes.add(0, athlete01);
+       listOfAthletes.add(1, athlete02);
+       listOfAthletes.add(2, athlete03);
+       listOfAthletes.add(3, athlete04);
+
+       System.out.println("Full list: " + listOfAthletes);
+
+       Athletes higherScore = listOfAthletes.get(0);
+       for (Athletes actualScore : listOfAthletes) {
+           if (actualScore.getScore() > higherScore.getScore()) {
+               higherScore = actualScore;
+               System.out.println("The highest score is: " + higherScore);
+                }
+            }
+        }*/
     }
 }
+
