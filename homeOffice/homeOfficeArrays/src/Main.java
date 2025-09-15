@@ -104,8 +104,31 @@ public class Main {
 
         //Only red cars
         for (Car car : listOfCars) {
-            if (Car.getColor() == "Red") {
+            if (car.getColor() == "Red") {
                 System.out.println(car);
+            }
+        }
+
+        //----------------------------------
+            // Traveling 
+        Travel travel01 = new Travel("South Korea", 18);
+        Travel travel02 = new Travel("Santa Maria City", 12);
+        Travel travel03 = new Travel("Tramandai Beach", 5);
+        Travel travel04 = new Trave("Cridreira Beach", 7);
+
+        ArrayList<Travel> listOfTravels = new ArrayList<>();
+
+        listOfTravels.add(0, travel01);
+        listOfTravels.add(1, travel02);
+        listOfTravels.add(2, travel03);
+        listOfTravels.add(3, travel04);
+
+        System.out.println("Full list: " + listOfTravels);
+
+        //Longer than 7 days
+        for (Travel travel : listOfTravels) {
+            if (travel.getDurationDays() >= 7) {
+                System.out.println("Travels with duration greater than 7 days: " + travel);
             }
         }
         }
